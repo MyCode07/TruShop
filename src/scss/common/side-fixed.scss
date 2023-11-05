@@ -1,4 +1,5 @@
 ._side-fixed {
+
     &[data-position="right"] {
         right: 0;
 
@@ -6,8 +7,9 @@
             transform: translate3d(101%, 0, 0);
             margin: 0 0 0 auto;
         }
-    }
     
+    }
+
     &[data-position="left"] {
         left: 0;
 

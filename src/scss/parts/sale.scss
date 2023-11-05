@@ -114,11 +114,15 @@
                 // .card__price-box
 
                 &-box {
+                    flex-direction: row !important;
                 }
 
                 // .card__price-salebox
 
                 &-salebox {
+                    & > :first-child {
+                        margin: 0 10px;
+                    }
                 }
             }
         }

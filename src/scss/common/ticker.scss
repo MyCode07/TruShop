@@ -7,13 +7,6 @@
     @include adaptive-value("margin-top", 100, 50, 1);
     @include adaptive-value("margin-bottom", 100, 50, 1);
 
-    @media (max-width: 992px) {
-        transform: translate(0, -160%);
-    }
-
-    @media (max-width: 375px) {
-        transform: translate(0, -175%);
-    }
 
     @media (any-hover: hover) {
         &:hover {

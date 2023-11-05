@@ -4,24 +4,8 @@ const body = document.body;
 const menuLinks = document.querySelectorAll('[data-open-menu]');
 const header = document.querySelector('.header');
 const menuAll = document.querySelectorAll('.menu');
-
 const menuItem = document.querySelectorAll('._menu-item');
 
-if (menuItem) {
-    menuItem.forEach(linkBcg => {
-        linkBcg.addEventListener('click', (e) => {
-            if (document.querySelector('._menu-item._active')) {
-                menuItem.forEach(link => {
-                    link.classList.remove('_active');
-                })
-                e.target.classList.toggle('_active');
-            }
-            else {
-                e.target.classList.toggle('_active');
-            }
-        })
-    })
-}
 
 if (menuAll.length) {
     const headerCoords = document.querySelector('.header').getBoundingClientRect();
@@ -48,15 +32,22 @@ if (menuLinks.length) {
                 if (menu.classList.contains('_open')) unLockPadding();
                 else lockPadding()
 
-                if (document.querySelector('.menu._open')) {
+                if (document.querySelector('.menu._open') && document.querySelector('._menu-item._active')) {
                     menuAll.forEach(menu => {
                         menu.classList.remove('_open');
                         body.classList.remove('_noscroll');
                     })
-                    menu.classList.toggle('_open');
 
+                    menuItem.forEach(link => {
+                        link.classList.remove('_active');
+                    })
+
+                    menu.classList.toggle('_open');
+                    link.classList.toggle('_active');
+                    
                 } else {
                     menu.classList.toggle('_open');
+                    link.classList.toggle('_active');
                 }
 
                 header.classList.add('_active');
@@ -80,6 +71,7 @@ document.addEventListener('click', (e) => {
     if (targetEl.classList.contains('_close-button')) {
         const offer = targetEl.closest('.offer');
         const menu = targetEl.closest('._basket')
+        const search = targetEl.closest('._search')
         const login = targetEl.closest('.login')
 
         if (offer) {
@@ -90,8 +82,12 @@ document.addEventListener('click', (e) => {
             }, 500);
         }
 
-        if (document.querySelector('.menu._open')) {
+        if (document.querySelector('._basket._open')) {
             menu.classList.remove('_open')
+        }
+        if (document.querySelector('._search._open')) {
+            search.classList.remove('_open')
+            document.querySelector('._menu-item._active').classList.remove('_active')
         }
 
         if (document.querySelector('.login._open')) {

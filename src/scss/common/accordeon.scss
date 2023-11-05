@@ -16,9 +16,14 @@
         // .accordion__item-title
 
         &-title {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
             cursor: pointer;
 
             svg {
+                width: fit-content;
                 transition: all 0.3s ease 0s;
             }
         }
@@ -36,6 +41,17 @@
                 overflow: hidden;
 
                 div {
+                    & > :not(:last-child) {
+                        margin-bottom: 20px;
+                    }
+                    p {
+                        color: #000;
+                        font-family: RobotoMono;
+                        @include adaptive-value("font-size", 16, 12, 1);
+                        @include adaptive-value("line-height", 16, 12, 1);
+                        font-style: normal;
+                        font-weight: 400;
+                    }
                 }
             }
         }

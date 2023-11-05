@@ -5,7 +5,7 @@ import { runTicker } from "./static/ticker.js";
 import { replaceDomElements } from "./static/replace.js";
 import { toTop } from "./static/to-top.js";
 import { stickyHeader } from "./parts/header.js";
-
+import './utils/smoothscrol.js';
 import "./parts/menu.js";
 import "./parts/header.js";
 import "./parts/animations.js";
@@ -13,6 +13,7 @@ import "./parts/mobile-controll.js";
 import "./parts/login.js";
 import "./parts/category-scroll.js";
 import "./parts/sliders.js";
+import "./parts/product-page.js";
 
 stickyHeader()
 toTop();

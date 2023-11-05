@@ -42,30 +42,31 @@ gsap.to(".image", {
 
 
 
+if (processSlider) {
 
-// "--p": (0, S.CD)(1, -.8, e.progress)
+    // "--p": (0, S.CD)(1, -.8, e.progress)
 
-const triggerElem = document.querySelector('[data-transform]');
-const triggerElemNext = document.querySelector('[data-transform-next]');
-ScrollTrigger.create({
-    trigger: triggerElem,
-    start: "top bottom",
-    end: "bottom top",
-    markers: true,
+    const triggerElem = document.querySelector('[data-transform]');
+    const triggerElemNext = document.querySelector('[data-transform-next]');
+    ScrollTrigger.create({
+        trigger: triggerElem,
+        start: "top bottom",
+        end: "bottom top",
 
-    onUpdate: (self) => {
-        let progress = self.progress + (1 - self.progress * 2)
-        self.trigger.setAttribute('style', `--tr: ${progress}`)
-    },
-});
+        onUpdate: (self) => {
+            let progress = self.progress + (1 - self.progress * 2)
+            self.trigger.setAttribute('style', `--tr: ${progress}`)
+        },
+    });
 
-ScrollTrigger.create({
-    trigger: triggerElemNext,
-    start: "top bottom",
-    end: "bottom top",
-    onUpdate: (self) => {
-        let progress = self.progress
-        if (progress >= 0.8) progress = 0.8
-        triggerElem.setAttribute('style', `--tr: ${-progress}`)
-    },
-});
+    ScrollTrigger.create({
+        trigger: triggerElemNext,
+        start: "top bottom",
+        end: "bottom top",
+        onUpdate: (self) => {
+            let progress = self.progress
+            if (progress >= 0.8) progress = 0.8
+            triggerElem.setAttribute('style', `--tr: ${-progress}`)
+        },
+    });
+}

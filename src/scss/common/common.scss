@@ -106,7 +106,7 @@ h5 {
 }
 
 ._white-button {
-    height: 44px;
+    height: 45px;
     border-radius: 4px;
     border: 1px solid #dadada;
     background: #fff;
@@ -271,12 +271,12 @@ h5 {
         }
     }
 
-    @media (hover: none) {
-        &:after {
-            animation: Hero_in__aNJcj 0.5s cubic-bezier(0.65, 0, 0.35, 1);
-            animation-fill-mode: forwards;
-        }
-    }
+    // @media (hover: none) {
+    //     &:after {
+    //         animation: Hero_in__aNJcj 0.5s cubic-bezier(0.65, 0, 0.35, 1);
+    //         animation-fill-mode: forwards;
+    //     }
+    // }
 
     @keyframes Hero_out__fnVjB {
         0% {
@@ -298,25 +298,25 @@ h5 {
         }
     }
 
-    @media only screen and (max-width: 767px) {
-        ._link-backgroundcolor {
-            display: flex;
-            align-items: center;
-            height: calc((40 / var(--gfs)) * 1rem);
-            grid-column-start: 1;
-        }
+    // @media only screen and (max-width: 767px) {
+    //     ._link-backgroundcolor {
+    //         display: flex;
+    //         align-items: center;
+    //         height: calc((40 / var(--gfs)) * 1rem);
+    //         grid-column-start: 1;
+    //     }
 
-        ._link-backgroundcolor,
-        ._link-backgroundcolor span {
-            text-align: center;
-        }
+    //     ._link-backgroundcolor,
+    //     ._link-backgroundcolor span {
+    //         text-align: center;
+    //     }
 
-        ._link-backgroundcolor:after {
-            animation: unset;
-            background-color: transparent;
-            animation-fill-mode: forwards;
-        }
-    }
+    //     ._link-backgroundcolor:after {
+    //         animation: unset;
+    //         background-color: transparent;
+    //         animation-fill-mode: forwards;
+    //     }
+    // }
 }
 
 ._menu-item {

@@ -362,6 +362,7 @@
 
 ._basket {
     height: 100vh;
+    width: 100%;
 
     &:after {
         content: "";
@@ -394,7 +395,7 @@
 
         @media (max-width: 768px) {
             justify-content: center;
-            
+
             & > :last-child {
                 display: none;
             }

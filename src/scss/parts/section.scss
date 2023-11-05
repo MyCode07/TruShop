@@ -1,4 +1,20 @@
 .section {
+    &._background {
+        background-color: #fff;
+        padding: 0 0 3px 0;
+    }
+
+    &._absolute {
+        .section__content {
+            & > :nth-child(2) {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+
     // .section__container
 
     &__container {
@@ -26,7 +42,7 @@
         justify-content: center;
         width: 100%;
         position: relative;
-        margin: 20px 0;
+        padding: 20px 0;
 
         @media (max-width: 768px) {
             justify-content: space-between;
@@ -48,10 +64,10 @@
 
     &._panel {
         position: relative;
-        height: 100vh;
+        min-height: 100vh;
 
         .section__body {
-            height: 100vh;
+            min-height: 100vh;
         }
 
         .section__content {
@@ -66,7 +82,8 @@
 
             @media (max-width: 768px) {
                 position: relative;
-                height: 100vh;
+                min-height: 100vh;
+
                 flex-direction: column;
                 align-items: center;
                 padding: 20px 0;
@@ -90,8 +107,9 @@
 
         .section__info {
             position: absolute;
-            bottom: 20px;
+            bottom: 50px;
             left: 20px;
+            pointer-events: none;
 
             label {
                 color: #fff;
@@ -127,7 +145,8 @@
     }
 
     &._shop {
-        height: 100vh;
+        min-height: 100vh;
+
         margin-top: 20px;
         margin-bottom: 3px;
 
@@ -136,7 +155,8 @@
             grid-template-columns: repeat(2, 1fr);
             grid-template-rows: auto;
             gap: 3px;
-            height: 100vh;
+            min-height: 100vh;
+
             position: relative;
 
             @media (max-width: 992px) {
@@ -204,7 +224,8 @@
         @include adaptive-value("margin-top", 100, 50, 1);
 
         .section__body {
-            height: 100vh;
+            min-height: 100vh;
+
             display: flex;
             align-items: center;
             justify-content: center;
@@ -216,11 +237,13 @@
         }
 
         .section__content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            position: relative;
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center !important;
             height: fit-content !important;
+            position: static !important;
+            justify-content: center !important;
+            
             p {
                 text-align: center;
                 color: #fff;

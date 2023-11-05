@@ -21,6 +21,35 @@
         min-height: 100vh;
     }
 
+    // .hero__title
+
+    &__title {
+        display: flex;
+        align-items: flex-start;
+
+        h1 {
+            display: block;
+            color: #fff;
+            font-family: NeueMontreal;
+            @include adaptive-value("font-size", 140, 66, 1);
+            @include adaptive-value("line-height", 108, 50, 1);
+            @include adaptive-value(" letter-spacing", -4.2, -2.16, 1);
+            text-transform: capitalize;
+        }
+
+        svg {
+            position: relative;
+            right: -15px;
+
+            @media (max-width: 768px) {
+                width: 20px;
+                height: 20px;
+                stroke-width: 0px;
+                right: -10px;
+            }
+        }
+    }
+
     // .hero__content
 
     &__content {
@@ -29,23 +58,6 @@
         align-items: flex-end;
         width: fit-content;
         height: fit-content;
-
-        h1 {
-            display: flex;
-            justify-content: space-between;
-
-            color: #fff;
-            font-family: NeueMontreal;
-            @include adaptive-value("font-size", 140, 72, 1);
-            @include adaptive-value("line-height", 108, 73, 1);
-            @include adaptive-value(" letter-spacing", -4.2, -2.16, 1);
-            text-transform: capitalize;
-
-            svg {
-                position: relative;
-                right: -15px;
-            }
-        }
     }
 
     // .hero__info
@@ -54,7 +66,7 @@
         display: flex;
         flex-direction: column;
         align-items: flex-end;
-        margin-right: 33px;
+        @include adaptive-value("margin-right", 33, 15, 1);
 
         div {
             display: flex;
@@ -62,6 +74,10 @@
 
             & > :first-child {
                 margin-right: 10px;
+            }
+
+            @media (max-width: 768px) {
+                margin: 10px 15px 10px 0;
             }
         }
 
@@ -95,6 +111,10 @@
             font-style: normal;
             font-weight: 300;
             text-transform: uppercase;
+
+            @media (max-width: 768px) {
+                font-weight: 500;
+            }
         }
     }
 }

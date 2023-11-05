@@ -21,11 +21,12 @@
         position: relative;
         display: flex;
         align-items: flex-end;
-
+        height: fit-content;
         svg {
             display: block;
             width: 100%;
             fill: #000;
+            height: fit-content;
 
             path {
                 transform: translate(0, -150%);
@@ -46,6 +47,20 @@
 
         @media (max-width: 1200px) {
             display: block;
+        }
+
+        ._underline {
+            text-align: left;
+            width: fit-content;
+            white-space: nowrap;
+
+            @media (max-width: 1024px) {
+                white-space: wrap;
+            }
+
+            &:after {
+                background-color: #000;
+            }
         }
     }
 
@@ -111,10 +126,6 @@
                     line-height: 14px;
                     max-width: 160px;
                     width: 100%;
-
-                    @media (max-width: 425px) {
-                        white-space: nowrap;
-                    }
                 }
             }
         }
