@@ -1,0 +1,102 @@
+.hero {
+    width: 100%;
+    min-height: 100vh;
+
+    background-image: url("@img/hero.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 38%;
+
+    // .hero__container
+
+    &__container {
+    }
+
+    // .hero__body
+
+    &__body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+    }
+
+    // .hero__content
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        width: fit-content;
+        height: fit-content;
+
+        h1 {
+            display: flex;
+            justify-content: space-between;
+
+            color: #fff;
+            font-family: NeueMontreal;
+            @include adaptive-value("font-size", 140, 72, 1);
+            @include adaptive-value("line-height", 108, 73, 1);
+            @include adaptive-value(" letter-spacing", -4.2, -2.16, 1);
+            text-transform: capitalize;
+
+            svg {
+                position: relative;
+                right: -15px;
+            }
+        }
+    }
+
+    // .hero__info
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        margin-right: 33px;
+
+        div {
+            display: flex;
+            margin: 10px 33px 10px 0;
+
+            & > :first-child {
+                margin-right: 10px;
+            }
+        }
+
+        label {
+            border-radius: 14px;
+            border: 2px solid #fff;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 44px;
+            padding: 0px 27px;
+
+            span {
+                color: #fff;
+                font-family: Inter;
+                @include adaptive-value("font-size", 22, 14, 1);
+                font-weight: 600;
+                @include adaptive-value("line-height", 22, 14, 1);
+
+                text-transform: capitalize;
+            }
+        }
+        p {
+            max-width: 146px;
+            width: 100%;
+            color: #fff;
+            font-family: Inter;
+            @include adaptive-value("font-size", 14, 12, 1);
+            line-height: 14px;
+            font-style: normal;
+            font-weight: 300;
+            text-transform: uppercase;
+        }
+    }
+}
+._container {
+}

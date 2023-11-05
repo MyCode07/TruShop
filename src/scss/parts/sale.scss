@@ -1,0 +1,133 @@
+.sale {
+    @include adaptive-value("padding-top", 100, 50, 1);
+    @include adaptive-value("padding-bottom", 100, 50, 1);
+    background-color: #000;
+
+    // .sale__container
+
+    &__container {
+    }
+
+    // .sale__body
+
+    &__body {
+    }
+
+    // .sale__top
+
+    &__top {
+        @include adaptive-value("margin-bottom", 100, 50, 1);
+
+        p {
+            text-align: left;
+            color: #fff;
+            font-family: RobotoMono;
+            @include adaptive-value("font-size", 40, 18, 1);
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+
+            @media (max-width: 1024px) {
+                letter-spacing: 0px;
+            }
+        }
+    }
+    .swiper {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+
+        // .swiper-wrapper
+
+        &-wrapper {
+        }
+
+        // .swiper-silde
+
+        &-silde {
+        }
+
+        // .swiper__controll
+
+        &__controll {
+            display: flex;
+            align-items: center;
+            margin-top: 50px;
+
+            button {
+                display: flex;
+                width: 40px;
+                height: 40px;
+                justify-content: center;
+                align-items: center;
+                border-radius: 4px;
+                background: #fff;
+
+                svg {
+                    pointer-events: none;
+                }
+            }
+            // .swiper__controll-prev
+
+            &-prev {
+                margin-right: 20px;
+            }
+
+            // .swiper__controll-next
+
+            &-next {
+                svg {
+                    width: fit-content;
+                    transform: rotate(180deg);
+                }
+            }
+        }
+
+        .card {
+            // .card__image
+
+            &__image {
+                background-color: #f7f7f7;
+                display: block;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            // .card__info
+
+            &__info {
+                color: #fff;
+            }
+
+            // .card__name
+
+            &__name {
+            }
+
+            // .card__price
+
+            &__price {
+                // .card__price-box
+
+                &-box {
+                }
+
+                // .card__price-salebox
+
+                &-salebox {
+                }
+            }
+        }
+    }
+}
+
+._white {
+    // ._white-button
+
+    &-button {
+    }
+}

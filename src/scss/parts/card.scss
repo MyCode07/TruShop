@@ -1,0 +1,122 @@
+.card {
+    @media (any-hover: hover) {
+        &:hover {
+            ._white-button {
+                opacity: 1;
+                visibility: visible;
+                z-index: 2;
+            }
+        }
+    }
+
+    // .card__image
+
+    &__image {
+        margin-bottom: 10px;
+        display: block;
+        position: relative;
+        background: #f7f7f7;
+    }
+
+    // .card__info
+
+    &__info {
+        color: #000;
+        font-family: RobotoMono;
+    }
+
+    // .card__name
+
+    &__name {
+        display: block;
+        margin-bottom: 3px;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 18px;
+
+        max-width: 90%;
+        width: 100%;
+
+        @media (max-width: 1024px) {
+            line-height: 14px;
+            margin-bottom: 2px;
+        }
+
+        @media (max-width: 768px) {
+            font-size: 12px;
+            line-height: 12px;
+        }
+    }
+
+    // .card__price
+
+    &__price {
+        // .card__price-box
+
+        &-box {
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+
+            @media (max-width: 1024px) {
+                line-height: 14px;
+            }
+
+            @media (max-width: 768px) {
+                font-size: 12px;
+                line-height: 16px;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+        // .card__price-salebox
+
+        &-salebox {
+            display: flex;
+            align-items: center;
+
+            & > :first-child {
+                display: block;
+                margin: 0 10px;
+                color: #727272;
+
+                @media (max-width: 768px) {
+                    margin: 0 10px 0 0;
+                }
+            }
+
+            & > :last-child {
+                color: #d90707;
+            }
+        }
+    }
+
+    ._white {
+        // ._white-button
+
+        &-button {
+            position: absolute;
+            left: 50%;
+            bottom: 30px;
+            transform: translate(-50%, 0);
+            width: calc(100% - 24px);
+            z-index: 2;
+
+            opacity: 0;
+            visibility: hidden;
+            z-index: -1;
+
+            transition: all 0.3s ease 0s;
+
+            @media (any-hover: hover) {
+                &:hover {
+                    span {
+                        color: #d90707;
+                    }
+                }
+            }
+        }
+    }
+}
