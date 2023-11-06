@@ -1,0 +1,199 @@
+@@include('./html/head.html', {
+"title":"Catalog page",
+})
+
+@@include('./html/header.html', {
+"class":"_sticky _scrolled",
+})
+
+<main>
+    <section class="section" id="catalog">
+        <div class="section__container _container">
+            <div class="section__body">
+                <div class="section__top">
+                    <h1>Футболки</h1>
+                </div>
+                <div class="filters">
+                    <div class="result">Результаты:<div>[<span>52</span>]</div>
+                    </div>
+                    <div class="catalog__filters">
+                        <div class="catalog__filters-sort _data ">
+                            <button class="catalog__filters-btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="17" height="14" viewBox="0 0 17 14"
+                                    fill="none">
+                                    <path
+                                        d="M3.7 5.57282V3.86082H0.5V2.26082H3.7V0.45282H5.3V5.57282H3.7ZM6.9 3.86082H16.5V2.26082H6.9V3.86082ZM11.7 13.5472V8.42722H13.3V10.2352H16.5V11.8352H13.3V13.5472H11.7ZM10.1 11.8352V10.2352H0.5V11.8352H10.1Z"
+                                        fill="black" />
+                                </svg>
+                                <label>Сортировать по: </label> 
+                                <span> Рекомендуемые</span>
+                            </button>
+                            <ul>
+                                <li class="_selected"> Рекомендуемые</li>
+                                <li> По алфавиту, А-Я</li>
+                                <li> По алфавиту Я-А</li>
+                                <li> Цена, от низкой к высокой</li>
+                                <li> Цена, от высокой к низкой</li>
+                                <li> Дата, от старого к новому</li>
+                                <li> Дата, новое к старому</li>
+                            </ul>
+                        </div>
+                        <button class="catalog__filters-open catalog__filters-btn">
+                            <span>Открыть фильтр</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="filters__active">
+                    <div class="filters__active-item">
+                        <p>Бренд:</p>
+                        <button>
+                            <label>TNDMTND GLADIATOR</label>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="8" height="10" viewBox="0 0 8 10"
+                                fill="none">
+                                <path
+                                    d="M8 2.3054L6.6946 1L4 3.6946L1.3054 1L0 2.3054L2.6946 5L0 7.6946L1.3054 9L4 6.3054L6.6946 9L8 7.6946L5.3054 5L8 2.3054Z"
+                                    fill="black" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="filters__active-item">
+
+                        <p>Размер:</p>
+                        <button>
+                            <label>X</label>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="8" height="10" viewBox="0 0 8 10"
+                                fill="none">
+                                <path
+                                    d="M8 2.3054L6.6946 1L4 3.6946L1.3054 1L0 2.3054L2.6946 5L0 7.6946L1.3054 9L4 6.3054L6.6946 9L8 7.6946L5.3054 5L8 2.3054Z"
+                                    fill="black" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="filters__active-item">
+                        <p>Цвет:</p>
+                        <button>
+                            <label>Чёрный</label>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="8" height="10" viewBox="0 0 8 10"
+                                fill="none">
+                                <path
+                                    d="M8 2.3054L6.6946 1L4 3.6946L1.3054 1L0 2.3054L2.6946 5L0 7.6946L1.3054 9L4 6.3054L6.6946 9L8 7.6946L5.3054 5L8 2.3054Z"
+                                    fill="black" />
+                            </svg>
+                        </button>
+                    </div>
+                    <button class="cleare__filtersbtn"><span>Очистить фильтры</span></button>
+                </div>
+                <div class="cards">
+                    <div class="cards__flex">
+                        <article class="card">
+                            <a href="" class="card__image">
+                                <img src="@img/products-image/green.png" alt="">
+                                <button class="_white-button"><span>Добавить в корзину</span></button>
+                            </a>
+                            <a href="" class="card__info">
+                                <span class="card__name">Футболка YOONEDE HEDZOLEH GREEN</span>
+                                <div class="card__price-box">
+                                    <span>6000.00 ₽</span>
+
+                                </div>
+                            </a>
+                        </article>
+                        <article class="card">
+                            <a href="" class="card__image">
+                                <img src="@img/products-image/black.png" alt="">
+                                <button class="_white-button"><span>Добавить в корзину</span></button>
+                            </a>
+                            <a href="" class="card__info">
+                                <span class="card__name">Футболка TNDMTND GLADIATOR BLACK</span>
+                                <div class="card__price-box">
+                                    <span>6000.00 ₽</span>
+                                </div>
+                            </a>
+                        </article>
+                        <article class="card">
+                            <a href="" class="card__image">
+                                <img src="@img/products-image/white.png" alt="">
+                                <button class="_white-button"><span>Добавить в корзину</span></button>
+                            </a>
+                            <a href="" class="card__info">
+                                <span class="card__name">Футболка TNDMTND GLADIATOR SAHARA</span>
+                                <div class="card__price-box">
+                                    <span>6000.00 ₽</span>
+                                </div>
+                            </a>
+                        </article>
+                        <article class="card">
+                            <a href="" class="card__image">
+                                <img src="@img/products-image/green.png" alt="">
+                                <button class="_white-button"><span>Добавить в корзину</span></button>
+                            </a>
+                            <a href="" class="card__info">
+                                <span class="card__name">Футболка YOONEDE HEDZOLEH GREEN</span>
+                                <div class="card__price-box">
+                                    <span>6000.00 ₽</span>
+                                </div>
+                            </a>
+                        </article>
+                    </div>
+                    <div class="cards__flex">
+                        <article class="card">
+                            <a href="" class="card__image">
+                                <img src="@img/products-image/green.png" alt="">
+                                <button class="_white-button"><span>Добавить в корзину</span></button>
+                            </a>
+                            <a href="" class="card__info">
+                                <span class="card__name">Футболка YOONEDE HEDZOLEH GREEN</span>
+                                <div class="card__price-box">
+                                    <span>6000.00 ₽</span>
+                                </div>
+                            </a>
+                        </article>
+                        <article class="card">
+                            <a href="" class="card__image">
+                                <img src="@img/products-image/black.png" alt="">
+                                <button class="_white-button"><span>Добавить в корзину</span></button>
+                            </a>
+                            <a href="" class="card__info">
+                                <span class="card__name">Футболка TNDMTND GLADIATOR BLACK</span>
+                                <div class="card__price-box">
+                                    <span>6000.00 ₽</span>
+                                </div>
+                            </a>
+                        </article>
+                        <article class="card">
+                            <a href="" class="card__image">
+                                <img src="@img/products-image/white.png" alt="">
+                                <button class="_white-button"><span>Добавить в корзину</span></button>
+                            </a>
+                            <a href="" class="card__info">
+                                <span class="card__name">Футболка TNDMTND GLADIATOR SAHARA</span>
+                                <div class="card__price-box">
+                                    <span>6000.00 ₽</span>
+                                </div>
+                            </a>
+                        </article>
+                        <article class="card">
+                            <a href="" class="card__image">
+                                <img src="@img/products-image/green.png" alt="">
+                                <button class="_white-button"><span>Добавить в корзину</span></button>
+                            </a>
+                            <a href="" class="card__info">
+                                <span class="card__name">Футболка YOONEDE HEDZOLEH GREEN</span>
+                                <div class="card__price-box">
+                                    <span>6000.00 ₽</span>
+
+                                </div>
+                            </a>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+</main>
+@@include('./html/filter.html')
+
+@@include('./html/footer.html')
+
+@@include('./html/scripts.html')

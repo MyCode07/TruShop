@@ -44,7 +44,7 @@ if (menuLinks.length) {
 
                     menu.classList.toggle('_open');
                     link.classList.toggle('_active');
-                    
+
                 } else {
                     menu.classList.toggle('_open');
                     link.classList.toggle('_active');
@@ -59,13 +59,12 @@ if (menuLinks.length) {
 
 document.addEventListener('click', (e) => {
     let targetEl = e.target;
-
-
-    if (!targetEl.hasAttribute('data-open-menu') && !targetEl.classList.contains('menu') && !targetEl.closest('.menu') && document.querySelector('.menu._open') && !targetEl.classList.contains('_close-button')) {
+    if (!targetEl.hasAttribute('data-open-menu') && !targetEl.classList.contains('menu') && !targetEl.closest('.menu')  && document.querySelector('.menu._open') && !targetEl.classList.contains('_close-button')) {
         document.querySelector('.menu._open').classList.remove('_open')
         document.querySelector('._menu-item._active').classList.remove('_active')
         header.classList.remove('_active');
         body.classList.remove('_noscroll');
+
     }
 
     if (targetEl.classList.contains('_close-button')) {
@@ -73,6 +72,7 @@ document.addEventListener('click', (e) => {
         const menu = targetEl.closest('._basket')
         const search = targetEl.closest('._search')
         const login = targetEl.closest('.login')
+        const filterBox = targetEl.closest('.filters-box')
 
         if (offer) {
             offer.classList.add('_close')
@@ -84,6 +84,9 @@ document.addEventListener('click', (e) => {
 
         if (document.querySelector('._basket._open')) {
             menu.classList.remove('_open')
+        }
+        if (document.querySelector('.filters-box._open')) {
+            filterBox.classList.remove('_open')
         }
         if (document.querySelector('._search._open')) {
             search.classList.remove('_open')

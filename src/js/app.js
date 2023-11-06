@@ -14,6 +14,7 @@ import "./parts/login.js";
 import "./parts/category-scroll.js";
 import "./parts/sliders.js";
 import "./parts/product-page.js";
+import "./parts/filters.js";
 
 stickyHeader()
 toTop();

@@ -39,6 +39,16 @@
         justify-content: space-between;
         margin-bottom: 30px;
 
+        &::-webkit-scrollbar {
+            background-color: #fff;
+            height: 4px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: #dadada;
+            height: 4px;
+        }
+
         img {
             @include adaptive-value("height", 650, 440, 1);
         }
