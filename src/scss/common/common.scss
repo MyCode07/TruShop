@@ -60,20 +60,23 @@ h2 {
 
 h3 {
     font-family: Inter;
-    @include adaptive-value("font-size", 40, 20, 1);
+    @include adaptive-value("font-size", 32, 18, 1);
     font-style: normal;
     font-weight: 900;
     line-height: 1.1;
     text-transform: uppercase;
+    @media (min-width: 769px) {
+        letter-spacing: -0.7px;
+    }
 }
 
 h4 {
     color: #000;
     font-family: RobotoMono;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 20px;
-    @include adaptive-value('font-size', 20, 16, 1);
+    @include adaptive-value("font-size", 16, 12, 1);
     text-transform: capitalize;
 }
 
@@ -217,7 +220,7 @@ h5 {
 }
 
 ._underline {
-    padding: 2px;
+    padding-bottom: 2px;
     position: relative;
     text-align: center;
 
@@ -334,7 +337,6 @@ h5 {
     z-index: 1;
     display: inline-block;
     overflow: hidden;
-    padding: 2px;
 
     span {
         display: block;
@@ -354,6 +356,8 @@ h5 {
     }
 
     &._active {
+        padding: 2px;
+
         &:before {
             animation: Item_in__UYiFI 0.5s cubic-bezier(0.65, 0, 0.35, 1);
             animation-fill-mode: forwards;

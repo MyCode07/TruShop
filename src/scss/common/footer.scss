@@ -37,8 +37,8 @@
     // .footer__content
 
     &__content {
-        @include adaptive-value("margin-top", 100, 50, 1);
-        @include adaptive-value("margin-bottom", 200, 50, 1);
+        margin-bottom: 50px;
+        margin-top: 50px;
 
         display: flex;
         justify-content: space-between;

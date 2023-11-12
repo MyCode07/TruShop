@@ -92,9 +92,10 @@
 
             a {
                 font-family: Inter;
-                @include adaptive-value("font-size", 40, 20, 1);
+                @include adaptive-value("font-size", 22, 18, 1);
+                letter-spacing: 0.5px;
                 font-style: normal;
-                font-weight: 900;
+                font-weight: 700;
                 line-height: 1.1;
                 text-transform: uppercase;
 
@@ -114,8 +115,8 @@
             label {
                 color: #fff;
                 font-family: Inter;
-                @include adaptive-value("font-size", 100, 40, 1);
-                @include adaptive-value("line-height", 120, 40, 1);
+                @include adaptive-value("font-size", 80, 40, 1);
+                @include adaptive-value("line-height", 90, 40, 1);
                 font-weight: 900;
                 text-transform: uppercase;
 
@@ -208,11 +209,12 @@
                     h3,
                     span {
                         font-family: Inter;
-                        @include adaptive-value("font-size", 30, 16, 1);
+                        @include adaptive-value("font-size", 22, 16, 1);
                         font-style: normal;
                         font-weight: 900;
                         line-height: 1.1;
                         text-transform: uppercase;
+                        letter-spacing: normal;
                     }
                 }
             }
@@ -302,11 +304,18 @@
                     font-weight: 400;
                     line-height: 12px;
                     background-color: #fff;
+
+                    @media (max-width: 768px) {
+                        height: 44px;
+                    }
                 }
                 button {
                     height: 55px;
                     width: 140px;
                     margin-left: 10px;
+                    @media (max-width: 768px) {
+                        height: 44px;
+                    }
                 }
             }
         }
